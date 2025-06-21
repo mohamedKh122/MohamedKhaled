@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A portfolio for Mohamed Khaled as a front-end web developer using Angular & TS.">
+  <meta name="robots" content="index,follow">
+  <meta name="googlebot-news" content="index">
+  <meta name="author" content="Mohamed Khaled">
+  <!-- Tailwind CSS File -->
+  <link rel="stylesheet" href="CSS/output.css">
+  <!-- Owl-carousel -->
+  <link rel="stylesheet" href="CSS/owl.carousel.css">
+  <!--Owl-carousel Default Theme -->
+  <link rel="stylesheet" href="CSS/owl.theme.css">
+  <!-- Toastr Css -->
+  <link rel="stylesheet" href="CSS/toastr.min.css">
+  <!-- Fontello CSS File -->
+  <link rel="stylesheet" href="CSS/fontello.css">
+  <link rel="icon" href="assets/Personal/logo.png" type="image/png">
+  <title>Mohamed Khaled Portfolio</title>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</head>
+
+<body class="relative">
+  <div class="loading hidden absolute top-0 left-0 z-50 w-full h-[100svh] transition-all duration-300 justify-center items-center bg-gray-950">
+    <img class="w-[150px] " src="assets/Personal/logo.png" alt="Mohamed' Logo">
+  </div>
+  <div class="hidden md:block cursor-dot"></div>
+  <div class="hidden md:block cursor-outline w-[35px] h-[35px] border-[2px] border-gray-900 dark:border-gray-300"></div>
+  <!-- Headeer Section -->
+  <nav class="transition-all duartion-700 fixed w-[90%] mt-7 rounded-4xl left-1/2 translate-x-[-50%] z-30 top-0 start-0 dark:border-gray-600">
+    <div class="w-full flex flex-wrap items-center justify-between mx-auto p-2">
+      <a href="#home" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="assets/Personal/logo.png" class="h-12 ml-5" alt="Mohamed's Logo" loading="lazy">
+      </a>
+      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse items-center">
+        <button id="darkButton" type="button" aria-label="Switch To Dark Mode" class="m-0 h-12 w-12 rounded-lg p-2 ">
+          <svg class="fill-violet-700 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg class="fill-yellow-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <button data-collapse-toggle="navbar-sticky" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none  "
+          aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul
+          class="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+          <li>
+            <a href="#about"
+              class=" block py-2 px-3 text-gray-200 rounded-sm md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 transition-all duration-300">About</a>
+          </li>
+          <li>
+            <a href="#services"
+              class=" block py-2 px-3 text-gray-200 rounded-sm md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 transition-all duration-300">Services</a>
+          </li>
+          <li>
+            <a href="#projects"
+              class=" block py-2 px-3 text-gray-200 rounded-sm md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 transition-all duration-300">Projects</a>
+          </li>
+          <li>
+            <a href="#certificates"
+              class=" block py-2 px-3 text-gray-200 rounded-sm md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 transition-all duration-300">Certificates</a>
+          </li>
+          <li>
+            <a href="#contact"
+              class=" block py-2 px-3 text-gray-200 rounded-sm md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 transition-all duration-300">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="sticky top-0" id="home">
+    <section
+      class="overflow-hidden flex flex-col justify-center items-center h-[100dvh] px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+      <div class="disappear rounded-xl px-3 py-2 md:px-10 md:py-5 hover:px-15 hover:rounded-4xl hover:bg-violet-500 transition-all duration-300 hover:text-gray-900 shadow-[0px_0px_8px_2px_#80009b,0px_4px_6px_-1px_rgba(0,0,0,0.1)]">
+        <h1 class="text-gray-300 md:text-5xl text-3xl font-bold text-center">
+          <span>I</span>
+          <span>Code</span>
+          <span>What</span>
+          <span>You</span>
+          <span>Imagine.</span>
+        </h1>
+      </div>
+      <div class="buttons flex justify-between mt-5">
+        <a aria-label="Download My CV" href="assets/MohamedKhaledCV.pdf" download="MohamedKhaledCV.pdf" class="text-gray-200 cursor-pointer me-5 bg-main px-4 py-2 rounded-md font-semibold hover:bg-transparent border-2 border-transparent hover:border-main hover:tracking-wider transition-all duartion-300" >Download My CV</a>
+        <a class="text-gray-200 cursor-pointer ms-5 px-4 py-2 rounded-md font-semibold border-2 border-main transition-all duartion-300 hover:bg-main hover:border-transparent hover:tracking-wider " href="#contact">Hit Me Up <i class="icon-rocket"></i></a>
+      </div>
+    </section>
+  </header>
+  <!-- Headeer Section -->
+  <!-- Main Section -->
+  <main class="bg-gray-100 dark:bg-gray-950 relative z-20 overflow-x-hidden">
+    <!-- About Section -->
+    <section id="about" class="flex flex-wrap items-center">
+      <div class="image basis-full md:basis-1/2">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="assets/Personal/Mohamed.png">
+          <img loading="lazy" class="grayscale-0 hover:grayscale transition-all duration-500 "
+            src="assets/Personal/MohamedMobile.png" alt="Mohamed's Image">
+        </picture>
+      </div>
+      <div class="info p-10 basis-full md:basis-1/2">
+        <h2
+          class="title relative overflow-hidden mb-5 text-main text-lg uppercase border border-main w-fit px-4 py-1 rounded-full">
+          About</h2>
+        <h3 class="mb-4 text-4xl font-bold text-gray-950 dark:text-gray-100 ">Mohamed Khaled</h3>
+        <p class="text-md/7 text-gray-950 dark:text-darkMode lg:w-3/4 w-full">
+          I'm a passionate Front-End Developer focused on crafting clean, responsive, and user-friendly interfaces.
+          Skilled in
+          <span class="text-marking-lightMode dark:text-white font-semibold">HTML5</span>,
+          <span class="text-marking-lightMode dark:text-white font-semibold">CSS3</span>,
+          <span class="text-marking-lightMode dark:text-white font-semibold">JavaScript</span>,
+          <span class="text-marking-lightMode dark:text-white font-semibold">TypeScript</span>,
+          <span class="text-marking-lightMode dark:text-white font-semibold">SCSS</span>, and experienced with
+          <span class="text-marking-lightMode dark:text-white font-semibold">Angular</span>,
+          <span class="text-marking-lightMode dark:text-white font-semibold">jQuery</span>,
+          <span class="text-marking-lightMode dark:text-white font-semibold">Bootstrap</span>, and
+          <span class="text-marking-lightMode dark:text-white font-semibold">Tailwind CSS</span>. I build with clean
+          code and always aim to improve and grow.
+        </p>
+      </div>
+    </section>
+    <!-- About Section -->
+    <!-- Skills Section -->
+    <section id="skills" class="py-10">
+      <div class="owl-carousel owl-theme mx-auto overflow-hidden ">
+        <div> <img loading="lazy" class="w-[50px] md:w-[75px] lg:w-[90px]" src="assets/Tech/HTML.webp" alt="HTML5 logo">
+        </div>
+        <div> <img loading="lazy" class="w-[50px] md:w-[75px] lg:w-[90px]" src="assets/Tech/css.webp" alt="CSS3 logo"></div>
+        <div> <img loading="lazy" class="w-[50px] md:w-[75px] lg:w-[90px]" src="assets/Tech/js.webp"
+            alt="Javascript JS Logo"> </div>
+        <div> <img loading="lazy" class="w-[50px] md:w-[75px] lg:w-[90px]" src="assets/Tech/typescript.webp"
+            alt="Typescript TS Logo"> </div>
+        <div> <img loading="lazy" class="w-[50px] md:w-[75px] lg:w-[90px]" src="assets/Tech/Angular.webp"
+            alt="Angualr Framework"> </div>
+        <div> <img loading="lazy" class="w-[50px] md:w-[75px] lg:w-[90px]" src="assets/Tech/bootstrap.webp"
+            alt="Bootstrab logo"> </div>
+        <div> <img loading="lazy" class="w-[50px] md:w-[75px] lg:w-[90px]" src="assets/Tech/Tailwind.webp"
+            alt="Taliwnd Logo"> </div>
+        <div> <img loading="lazy" class="w-[50px] md:w-[75px] lg:w-[90px]" src="assets/Tech/Jquery.webp" alt="JQuery Logo">
+        </div>
+        <div> <img loading="lazy" class="w-[50px] md:w-[75px] lg:w-[90px]" src="assets/Tech/sass.webp" alt="Sass Logo">
+        </div>
+        <div> <img loading="lazy" class="w-[50px] md:w-[75px] lg:w-[90px]" src="assets/Tech/github.webp" alt="Github Logo">
+        </div>
+        <div> <img loading="lazy" class="w-[50px] md:w-[75px] lg:w-[90px]" src="assets/Tech/Postman.webp"
+            alt="Post Man Logo"> </div>
+      </div>
+    </section>
+    <!--End Skills Section -->
+    <!--Start Services Section -->
+    <section id="services" class="border-t border-gray-400 py-10">
+      <!-- Title -->
+      <h2 class="title mx-auto relative overflow-hidden mb-5 text-main text-xl uppercase border border-main w-fit px-4 py-1 rounded-full">Services</h2>
+      <!-- Title -->
+      <div class=" container mx-auto py-5">
+        <!-- The Row -->
+        <div class="flex flex-wrap items-stretch gap-y-5 ">
+          <!-- The Row -->
+          <div class=" px-3 basis-full md:basis-1/2 lg:basis-1/3">
+            <div class="px-2 py-3 h-[90%] rounded-2xl border-2 border-gray-900 shadow-[0px_0px_20px_0px_rgba(130,0,219,0.8)] my-3 text-center  card">
+              <lord-icon src="https://cdn.lordicon.com/fwkrbvja.json" trigger="hover"
+                colors="primary:#242424,secondary:#8200db" style="width:100px;height:100px">
+              </lord-icon>
+              <h3 class="text-gray-950 my-1 text-xl dark:text-gray-100 font-bold">Custom Front-End Development</h3>
+              <p class="text-gray-950 text-sm dark:text-darkMode ">Building responsive and interactive websites with
+                modern tools like HTML5, CSS3, JavaScript, TypeScript, Angular, and Tailwind CSS.</p>
+            </div>
+          </div>
+          <div class="px-3 basis-full md:basis-1/2 lg:basis-1/3">
+            <div class="px-2 py-3 h-[90%] rounded-2xl border-2 border-gray-900 shadow-[0px_0px_20px_0px_rgba(130,0,219,0.8)] my-3 text-center  card">
+              <lord-icon src="https://cdn.lordicon.com/ogjpwrxe.json" trigger="hover"
+                colors="primary:#242424,secondary:#8200db" style="width:100px;height:100px">
+              </lord-icon>
+              <h3 class="text-gray-950 my-1 text-xl dark:text-gray-100 font-bold">Responsive Web Design</h3>
+              <p class="text-gray-950 text-sm dark:text-darkMode ">Creating layouts that adapt perfectly to all screen
+                sizes for a seamless experience.</p>
+            </div>
+          </div>
+          <div class="px-3 basis-full md:basis-1/2 lg:basis-1/3">
+            <div class="px-2 py-3 h-[90%] rounded-2xl border-2 border-gray-900 shadow-[0px_0px_20px_0px_rgba(130,0,219,0.8)] my-3 text-center  card">
+              <lord-icon src="https://cdn.lordicon.com/exymduqj.json" trigger="hover"
+                colors="primary:#242424,secondary:#8200db" style="width:100px;height:100px">
+              </lord-icon>
+              <h3 class="text-gray-950 my-1 text-xl dark:text-gray-100 font-bold">UI from Design Tools</h3>
+              <p class="text-gray-950 text-sm dark:text-darkMode ">Converting Figma, Adobe XD, or Sketch designs into clean, pixel-perfect interfaces with smooth
+                interactions.</p>
+            </div>
+          </div>
+          <div class="px-3 basis-full md:basis-1/2 lg:basis-1/3">
+            <div class="px-2 py-3 h-[90%] rounded-2xl border-2 border-gray-900 shadow-[0px_0px_20px_0px_rgba(130,0,219,0.8)] my-3 text-center  card">
+              <lord-icon src="https://cdn.lordicon.com/xqdfobxg.json" trigger="hover"
+                colors="primary:#242424,secondary:#8200db" style="width:100px;height:100px">
+              </lord-icon>
+              <h3 class="text-gray-950 my-1 text-xl dark:text-gray-100 font-bold">Performance Optimization</h3>
+              <p class="text-gray-950 text-sm dark:text-darkMode ">Improving load speed and performance with lazy loading, image optimization, and code splitting.</p>
+            </div>
+          </div>
+          <div class="px-3 basis-full md:basis-1/2 lg:basis-1/3">
+            <div class="px-2 py-3 h-[90%] rounded-2xl border-2 border-gray-900 shadow-[0px_0px_20px_0px_rgba(130,0,219,0.8)] my-3 text-center  card">
+              <lord-icon src="https://cdn.lordicon.com/weehpyrf.json" trigger="hover"
+                colors="primary:#242424,secondary:#8200db" style="width:100px;height:100px">
+              </lord-icon>
+              <h3 class="text-gray-950 my-1 text-xl dark:text-gray-100 font-bold">Accessibility (A11y)</h3>
+              <p class="text-gray-950 text-sm dark:text-darkMode ">Ensuring inclusive experiences using semantic HTML, ARIA, and keyboard navigation.</p>
+            </div>
+          </div>
+          <div class="px-3 basis-full md:basis-1/2 lg:basis-1/3">
+            <div class="px-2 py-3 h-[90%] rounded-2xl border-2 border-gray-900 shadow-[0px_0px_20px_0px_rgba(130,0,219,0.8)] my-3 text-center  card">
+              <lord-icon src="https://cdn.lordicon.com/ejvnoism.json" trigger="hover"
+                colors="primary:#8200db,secondary:#242424" style="width:100px;height:100px">
+              </lord-icon>
+              <h3 class="text-gray-950 my-1 text-xl dark:text-gray-100 font-bold">API Integration</h3>
+              <p class="text-gray-950 text-sm dark:text-darkMode ">Connecting front-end with REST APIs to fetch and display dynamic data.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Services Section -->
+    <!-- Start Projects Section -->
+  <section id="projects">
+    <h2 class="title mx-auto relative overflow-hidden mb-5 text-main text-xl uppercase border border-main w-fit px-4 py-1 rounded-full">Projects</h2>
+    <div class="container mx-auto py-5">
+      <div class="projectsCont flex flex-wrap gap-y-10">
+        
+      </div>
+    </div>
+    </section>
+    <!-- End Projects Section -->
+    <!-- Start Certificates Section -->
+    <section id="certificates" class="py-10">
+    <h2 class="title mx-auto relative overflow-hidden mb-5 text-main text-xl uppercase border border-main w-fit px-4 py-1 rounded-full">Certificates</h2>
+    <div class="container mx-auto">
+      <div class="flex flex-wrap gap-y-5">
+        <div class="px-3 basis-full md:basis-1/2 lg:basis-1/3">
+          <div class="shadow-[5px_5px_0px_0px_#8200db] overflow-hidden hover:shadow-[-5px_-5px_0px_0px_#8200db] rounded-2xl transition-all duration-300">
+          <img class=" transition-all hover:scale-[1.2] duration-300 border-2 border-gray-400 dark:border-gray-900" loading="lazy" src="assets/certificates/Route.webp" alt="Route IT Certificates">
+          </div>
+        </div>
+        <div class="px-3 basis-full md:basis-1/2 lg:basis-1/3">
+          <div class="shadow-[5px_5px_0px_0px_#8200db] overflow-hidden hover:shadow-[-5px_-5px_0px_0px_#8200db] rounded-2xl transition-all duration-300">
+          <img class=" transition-all hover:scale-[1.2] duration-300 border-4 border-gray-900 dark:border-gray-200" loading="lazy" src="assets/certificates/maharaTech.webp" alt="HTML&CSS Course Certificate From Mahara Tech">
+          </div>
+        </div>
+        <div class="px-3 basis-full md:basis-1/2 lg:basis-1/3">
+          <div class="shadow-[5px_5px_0px_0px_#8200db] overflow-hidden hover:shadow-[-5px_-5px_0px_0px_#8200db] rounded-2xl transition-all duration-300">
+          <img class=" transition-all hover:scale-[1.2] duration-300 border-2 border-gray-900 dark:border-gray-200" loading="lazy" src="assets/certificates/CSS.webp" alt="CSS Full Course Certificate">
+          </div>
+        </div>
+        <div class="px-3 basis-full md:basis-1/2 lg:basis-1/3">
+          <div class="shadow-[5px_5px_0px_0px_#8200db] overflow-hidden hover:shadow-[-5px_-5px_0px_0px_#8200db] rounded-2xl transition-all duration-300">
+          <img class=" transition-all hover:scale-[1.2] duration-300 border-2 border-gray-900 dark:border-gray-200" loading="lazy" src="assets/certificates/Dart.webp" alt="Dart Course Certificate">
+          </div>
+        </div>
+        <div class="px-3 basis-full md:basis-1/2 lg:basis-1/3">
+          <div class="shadow-[5px_5px_0px_0px_#8200db] overflow-hidden hover:shadow-[-5px_-5px_0px_0px_#8200db] rounded-2xl transition-all duration-300">
+          <img class=" transition-all hover:scale-[1.2] duration-300 border-2 border-gray-900 dark:border-gray-200" loading="lazy" src="assets/certificates/fast typing.webp" alt="Fast Typing Certificate">
+          </div>
+        </div>
+        <div class="px-3 basis-full md:basis-1/2 lg:basis-1/3 ">
+          <div class="shadow-[5px_5px_0px_0px_#8200db] overflow-hidden rounded-2xl hover:shadow-[-5px_-5px_0px_0px_#8200db] transition-all duration-300">
+          <img class=" transition-all hover:scale-[1.2] duration-300 border-2 border-gray-900 dark:border-gray-200" loading="lazy" src="assets/certificates/HTML.webp" alt="HTML Course Certificate">
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- End Certificates Section -->
+    <!-- Start Contact Section -->
+    <section id="contact" class="overflow-hidden  " >
+      <canvas id="c" class="absolute max-w-full max-h-full -z-10"></canvas>
+      <div class="container mx-auto py-10 flex flex-wrap h-full max-w-[95%] md:max-w-3/4">
+        <div class='titles basis-full md:basis-1/2 mt-5'>
+          <h2 class="title relative overflow-hidden mb-5 text-main text-xl uppercase border border-main w-fit px-4 py-1 rounded-full">Contact</h2>
+          <h3 class="text-gray-950 dark:text-gray-200 font-bold text-3xl lg:text-4xl">Have a Project? Let’s Talk</h3>
+        </div>
+        <div class=" basis-full md:basis-1/2">
+        <div class="name my-4">
+          <label for="userName" class="uppercase block text-base text-gray-950 dark:text-darkMode font-normal">Name / Company</label>
+          <input type="text" name="userName" id="userName" class="w-full border dark:border-darkMode rounded-sm text-gray-950 dark:text-darkMode px-2 py-1 mt-1 focus:shadow-[0px_0px_8px_2px_#8200db,0px_4px_6px_-1px_rgba(0,0,0,0.1)] focus:border-main focus:outline-0">
+          <p class="hidden text-red-500 mt-1 errorWarn">Name cannot be empty</p>
+        </div>
+        <div class="email my-4">
+          <label for="userEmail" class="uppercase block text-base text-gray-950 dark:text-darkMode font-normal">Email</label>
+          <input type="email" name="userEmail" id="userEmail" class="w-full border dark:border-darkMode rounded-sm text-gray-950 dark:text-darkMode px-2 py-1 mt-1 focus:shadow-[0px_0px_8px_2px_#8200db,0px_4px_6px_-1px_rgba(0,0,0,0.1)] focus:border-main focus:outline-0">
+          <p class="hidden text-red-500 mt-1 errorWarn">Email cannot be empty</p>
+        </div>
+      <div class="message my-4">
+          <label for="userMessage" class="uppercase block text-base text-gray-950 dark:text-darkMode font-normal">How can I help you?</label>
+          <textarea class="border dark:border-darkMode w-full rounded-sm text-gray-950 dark:text-darkMode px-2 py-1 mt-1 h-[150px] focus:shadow-[0px_0px_8px_2px_#8200db,0px_4px_6px_-1px_rgba(0,0,0,0.1)] focus:border-main focus:outline-0" name="userMessage" id="userMessage"></textarea>
+          <p class="hidden text-red-500 mt-1 errorWarn">Message cannot be empty</p>
+      </div>
+        <div class="button flex justify-between items-center gap-x-5 md:flex-row flex-col-reverse">
+          <a class="w-full md:w-auto transition-all duartion-300 font-semibold text-gray-800 hover:text-gray-950 dark:text-darkMode in-dark:hover:text-white" href="mailto:mhamed.khaled.4598@gmail.com"><i class="icon-mail-alt "></i> mhamed.khaled.4598@gmail.com</a>
+          <button id="submitButton" type="submit" class= "w-full md:w-auto cursor-pointer px-4 font-semibold py-2 rounded-sm transition-all duration-300 bg-gray-950 dark:bg-gray-200 text-gray-200 dark:text-gray-950 hover:text-gray-950 hover:bg-gray-200  in-dark:hover:bg-gray-950 in-dark:hover:text-gray-200 border-2 border-gray-200 hover:border-gray-950 in-dark:hover:border-gray-200">Hit Me Up <i class="icon-rocket"></i></button>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact Section -->
+  </main>
+  <!-- Main Section -->
+  <!-- Footer -->
+  <footer class="bg-gray-200 border-t dark:border-gray-200 dark:bg-gray-900 relative z-20 flex flex-col py-5 justify-center items-center">
+    <img class="w-[100px] mb-3" src="assets/Personal/logo.png" alt="Mohamed's Logo" loading="lazy">
+    <div class="links">
+      <a aria-label="LinkedIn Proflile Link" class="text-gray-800 dark:text-gray-300 hover:text-blue-500 transition-colors duration-300 text-xl" href="https://www.linkedin.com/in/mohamed-khaled122"><i class=" icon-linkedin-squared"></i></a>
+      <a aria-label="Facebook Profile Link" class="text-gray-800 dark:text-gray-300 hover:text-blue-700 transition-colors duration-300 text-xl" href="https://www.facebook.com/mohamed.khaled.207009/"><i class="icon-facebook-squared"></i></a>
+      <a aria-label="Instegram Profile Link" class="text-gray-800 dark:text-gray-300 hover:text-pink-800 transition-colors duration-300 text-xl" href="https://www.instagram.com/mohamed_khaled_122/"><i class="icon-instagram"></i></a>
+      <a aria-label="Whatsapp Profile Link" class="text-gray-800 dark:text-gray-300 hover:text-green-600 transition-colors duration-300 text-xl" href="https://wa.me/201117055515"><i class="icon-whatsapp"></i></a>
+      <a aria-label="Github Profile Link" class="text-gray-800 dark:text-gray-300 hover:text-black transition-colors duration-300 text-xl" href="https://github.com/mohamedKh122"><i class="icon-github-circled"></i></a>
+    </div>
+    <p class="text-gray-950 font-bold dark:text-darkMode " id="copyright">© 2025 MOHAMED KHALED</p>
+  </footer>
+  <!-- Footer -->
+
+  <script src="JS/jquery-1.9.1.min.js"></script>
+  <script src="JS/owl.carousel.min.js"></script>
+  <script src="JS/toastr.min.js"></script>
+  <script src="JS/index.js"></script>
+</body>
+</html>
